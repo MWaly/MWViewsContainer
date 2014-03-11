@@ -22,6 +22,11 @@
 		52BE12F318CF26570099023B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BE12D218CF26570099023B /* UIKit.framework */; };
 		52BE12FB18CF26570099023B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52BE12F918CF26570099023B /* InfoPlist.strings */; };
 		52BE12FD18CF26570099023B /* ContainerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE12FC18CF26570099023B /* ContainerDemoTests.m */; };
+		52BE131218CF29860099023B /* MWContainerTopbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE130718CF29860099023B /* MWContainerTopbar.m */; };
+		52BE131318CF29860099023B /* MWTopbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE130918CF29860099023B /* MWTopbarButton.m */; };
+		52BE131418CF29860099023B /* MWTopbarIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE130B18CF29860099023B /* MWTopbarIndicator.m */; };
+		52BE131518CF29860099023B /* MWVcsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE130F18CF29860099023B /* MWVcsContainer.m */; };
+		52BE131618CF29860099023B /* MWContainerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE131118CF29860099023B /* MWContainerConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,18 @@
 		52BE12F818CF26570099023B /* ContainerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContainerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		52BE12FA18CF26570099023B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		52BE12FC18CF26570099023B /* ContainerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContainerDemoTests.m; sourceTree = "<group>"; };
+		52BE130618CF29860099023B /* MWContainerTopbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWContainerTopbar.h; sourceTree = "<group>"; };
+		52BE130718CF29860099023B /* MWContainerTopbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWContainerTopbar.m; sourceTree = "<group>"; };
+		52BE130818CF29860099023B /* MWTopbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTopbarButton.h; sourceTree = "<group>"; };
+		52BE130918CF29860099023B /* MWTopbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTopbarButton.m; sourceTree = "<group>"; };
+		52BE130A18CF29860099023B /* MWTopbarIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTopbarIndicator.h; sourceTree = "<group>"; };
+		52BE130B18CF29860099023B /* MWTopbarIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTopbarIndicator.m; sourceTree = "<group>"; };
+		52BE130C18CF29860099023B /* MWContainerTopbarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWContainerTopbarProtocol.h; sourceTree = "<group>"; };
+		52BE130D18CF29860099023B /* MWContainerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWContainerProtocol.h; sourceTree = "<group>"; };
+		52BE130E18CF29860099023B /* MWVcsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVcsContainer.h; sourceTree = "<group>"; };
+		52BE130F18CF29860099023B /* MWVcsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVcsContainer.m; sourceTree = "<group>"; };
+		52BE131018CF29860099023B /* MWContainerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWContainerConstants.h; sourceTree = "<group>"; };
+		52BE131118CF29860099023B /* MWContainerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWContainerConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +137,7 @@
 				52BE12E318CF26570099023B /* Main_iPad.storyboard */,
 				52BE12E618CF26570099023B /* CDViewController.h */,
 				52BE12E718CF26570099023B /* CDViewController.m */,
+				52BE131718CF298B0099023B /* MWContainer Topbar */,
 				52BE12E918CF26570099023B /* Images.xcassets */,
 				52BE12D518CF26570099023B /* Supporting Files */,
 			);
@@ -153,6 +171,25 @@
 				52BE12F918CF26570099023B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52BE131718CF298B0099023B /* MWContainer Topbar */ = {
+			isa = PBXGroup;
+			children = (
+				52BE130618CF29860099023B /* MWContainerTopbar.h */,
+				52BE130718CF29860099023B /* MWContainerTopbar.m */,
+				52BE130818CF29860099023B /* MWTopbarButton.h */,
+				52BE130918CF29860099023B /* MWTopbarButton.m */,
+				52BE130A18CF29860099023B /* MWTopbarIndicator.h */,
+				52BE130B18CF29860099023B /* MWTopbarIndicator.m */,
+				52BE130C18CF29860099023B /* MWContainerTopbarProtocol.h */,
+				52BE130D18CF29860099023B /* MWContainerProtocol.h */,
+				52BE130E18CF29860099023B /* MWVcsContainer.h */,
+				52BE130F18CF29860099023B /* MWVcsContainer.m */,
+				52BE131018CF29860099023B /* MWContainerConstants.h */,
+				52BE131118CF29860099023B /* MWContainerConstants.m */,
+			);
+			name = "MWContainer Topbar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +292,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BE12DB18CF26570099023B /* main.m in Sources */,
+				52BE131418CF29860099023B /* MWTopbarIndicator.m in Sources */,
+				52BE131218CF29860099023B /* MWContainerTopbar.m in Sources */,
 				52BE12DF18CF26570099023B /* CDAppDelegate.m in Sources */,
 				52BE12E818CF26570099023B /* CDViewController.m in Sources */,
+				52BE131618CF29860099023B /* MWContainerConstants.m in Sources */,
+				52BE131318CF29860099023B /* MWTopbarButton.m in Sources */,
+				52BE131518CF29860099023B /* MWVcsContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
