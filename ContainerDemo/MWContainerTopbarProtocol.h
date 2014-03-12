@@ -11,6 +11,6 @@
 
 @protocol MWContainerTopbarProtocol <NSObject>
 @required
-- (void)didSelectItem:(MWTopbarButton*)button;
+- (void)didSelectItem:(MWTopbarButton *)button;
 
 @end

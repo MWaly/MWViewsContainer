@@ -10,9 +10,9 @@
 
 @interface MWTopbarIndicator : UIView
 
-- (instancetype) initWithImage:(UIImage*)indicatorImage;
-- (instancetype) initWithImage:(UIImage*)indicatorImage andHeight:(CGFloat)height;
-- (instancetype) initWithColor:(UIColor*)indicatorColor;
-- (instancetype) initWithColor:(UIColor*)indicatorColor andHeight:(CGFloat)height;
+- (instancetype)initWithImage:(UIImage *)indicatorImage;
+- (instancetype)initWithImage:(UIImage *)indicatorImage andHeight:(CGFloat)height;
+- (instancetype)initWithColor:(UIColor *)indicatorColor;
+- (instancetype)initWithColor:(UIColor *)indicatorColor andHeight:(CGFloat)height;
 
 @end

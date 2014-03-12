@@ -50,15 +50,14 @@
 		[self.backgroundButton setFrame:self.frame];
 		self.textLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.width, 30)];
 		[self.textLabel setTextColor:self.fontColorInActive];
-    
+        
 		self.textLabel.text = titleText;
 		self.textLabel.textAlignment = NSTextAlignmentCenter;
 		self.textLabel.center = self.center;
 		[self addSubview:self.textLabel];
 		[self.backgroundButton addTarget:self action:@selector(didTap) forControlEvents:UIControlEventTouchUpInside];
 		[self addSubview:self.backgroundButton];
-        [self addObserver:self forKeyPath:@"isSelected" options:0 context:nil];
-
+		[self addObserver:self forKeyPath:@"isSelected" options:0 context:nil];
 	}
 	return self;
 }
@@ -114,24 +113,21 @@
 	[_topBarDelegate didSelectItem:self];
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"isSelected"] ) {
-        [self changeMode:self.isSelected];
-    }
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+	if ([keyPath isEqualToString:@"isSelected"]) {
+		[self changeMode:self.isSelected];
+	}
 }
 
-- (void)changeMode:(BOOL)selected
-{
-    if (selected)
-    {
-        [self.textLabel setTextColor:self.fontColorActive];
-        [self setBackgroundColor:self.backgroundColorActive];
-    }
-    else
-    {
-        [self.textLabel setTextColor:self.fontColorInActive];
-        [self setBackgroundColor:self.backgroundColorInActive];
-    }
+- (void)changeMode:(BOOL)selected {
+	if (selected) {
+		[self.textLabel setTextColor:self.fontColorActive];
+		[self setBackgroundColor:self.backgroundColorActive];
+	}
+	else {
+		[self.textLabel setTextColor:self.fontColorInActive];
+		[self setBackgroundColor:self.backgroundColorInActive];
+	}
 }
+
 @end

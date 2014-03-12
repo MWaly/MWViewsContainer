@@ -13,15 +13,14 @@
 @class MWContainerTopbar;
 
 typedef enum {
-    MWContainerFixedVariables =0, //  Default Style where width and height are defined from the constants file
-    MWContainerFitAllSpace =1, // The VC will fill all the space and won't be scrollable
+	MWContainerFixedVariables = 0, //  Default Style where width and height are defined from the constants file
+	MWContainerFitAllSpace = 1, // The VC will fill all the space and won't be scrollable
 } MWVCContainerStyle;
 
 
 
 
-
-@interface MWVcsContainer : UIViewController <MWContainerProtocol,UINavigationControllerDelegate>
+@interface MWVcsContainer : UIViewController <MWContainerProtocol, UINavigationControllerDelegate>
 
 
 /**
@@ -32,7 +31,7 @@ typedef enum {
  *  @return Navigation Controller with root view controller of the first element in the array
  */
 
-- (instancetype)initWithObjects:(NSArray*)arrayOfVCs;
+- (instancetype)initWithObjects:(NSArray *)arrayOfVCs;
 
 /**
  *  Initiliazer with custom values for button sizes
@@ -42,7 +41,7 @@ typedef enum {
  *
  *  @return Navigation Controller with root view controller of the first element in the array
  */
-- (instancetype)initWithObjects:(NSArray*)arrayOfVCs withButtonSize:(CGSize)buttonSubsize;
+- (instancetype)initWithObjects:(NSArray *)arrayOfVCs withButtonSize:(CGSize)buttonSubsize;
 
 
 /**
@@ -53,7 +52,7 @@ typedef enum {
  *
  *  @return Navigation Controller with root view controller of the first element in the array
  */
-- (instancetype)initWithObjects:(NSArray*)arrayOfVCs withVCSize:(CGSize)vcSubsize;
+- (instancetype)initWithObjects:(NSArray *)arrayOfVCs withVCSize:(CGSize)vcSubsize;
 
 /**
  *  Initiliazer with custom values for embedded viewcontroller sizes , different colors for buttons in different states
@@ -65,7 +64,7 @@ typedef enum {
  *
  *  @return Navigation Controller with root view controller of the first element in the array
  */
-- (instancetype)initWithObjects:(NSArray*)arrayOfVCs withVCSize:(CGSize)vcSubsize backgroundActiveColor:(UIColor*)color  backgroundInactivecolor:(UIColor*)inactiveColor;
+- (instancetype)initWithObjects:(NSArray *)arrayOfVCs withVCSize:(CGSize)vcSubsize backgroundActiveColor:(UIColor *)color backgroundInactivecolor:(UIColor *)inactiveColor;
 
 
 /**
@@ -78,9 +77,9 @@ typedef enum {
  *  @return Navigation Controller with root view controller of the first element in the array
  */
 
-- (instancetype)initWithObjects:(NSArray*)arrayOfVCs andAttributes:(NSDictionary*)attributes style:(MWVCContainerStyle)style;
+- (instancetype)initWithObjects:(NSArray *)arrayOfVCs andAttributes:(NSDictionary *)attributes style:(MWVCContainerStyle)style;
 
-// read only property for top bar in case inspection of a certain attribute is needed 
-@property (nonatomic,strong) MWContainerTopbar *topbar;
+// read only property for top bar in case inspection of a certain attribute is needed
+@property (nonatomic, strong) MWContainerTopbar *topbar;
 
 @end
